@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MenuFlow — Gestão para restaurantes</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="loginScreen" class="login-wrap">
+  <div class="login-card"><div class="brand-mark">M</div><h1>MenuFlow</h1><p class="muted">Gestão inteligente para restaurantes</p>
+  <form id="loginForm"><label>Usuário ou e-mail</label><input id="username" value="admin" required>
+  <label>Senha</label><input id="password" type="password" value="123456" required>
+  <button class="primary full">Entrar no sistema</button><p class="hint">Demonstração: admin / 123456</p><p id="loginError" class="error"></p></form></div>
+</div>
+<div id="app" class="app hidden">
+  <aside class="sidebar"><div class="brand"><span class="brand-mark small">M</span><div><b>MenuFlow</b><small>GESTÃO RESTAURANTE</small></div></div>
+  <div class="nav-label">MENU PRINCIPAL</div><nav id="nav">
+    <button class="nav-item active" data-page="dashboard">▦ <span>Visão geral</span></button>
+    <button class="nav-item" data-page="products">▤ <span>Cardápio digital</span></button>
+    <button class="nav-item" data-page="stock">▧ <span>Controle de estoque</span></button>
+    <button class="nav-item" data-page="employees">♙ <span>Equipe</span></button>
+    <button class="nav-item" data-page="reports">▥ <span>Relatórios financeiros</span></button>
+    <button class="nav-item" data-page="payments">＄ <span>Pagamentos</span></button>
+    <button class="nav-item" data-page="kitchen">♨ <span>Produção da cozinha</span></button>
+  </nav><div class="sidebar-bottom"><div class="avatar">AD</div><div><b>Administrador</b><small>Gestor do restaurante</small></div><button id="logout" title="Sair">↪</button></div></aside>
+  <main class="main"><header class="topbar"><div><div class="eyebrow">PAINEL DE CONTROLE</div><h2 id="pageTitle">Visão geral</h2></div><div class="top-actions"><span class="status-dot"></span><span>Operação ativa</span><div class="top-avatar">AD</div></div></header>
+  <section id="content" class="content"></section><footer>MenuFlow <span>•</span> Sistema de Gestão para Restaurantes</footer></main>
+</div>
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle">Adicionar</h3><button id="closeModal" class="icon-btn">✕</button></div><form id="modalForm"><div id="modalFields" class="form-grid"></div><div class="modal-actions"><button type="button" id="cancelModal" class="secondary">Cancelar</button><button class="primary">Salvar informações</button></div></form></div></div>
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body></html>
